@@ -86,9 +86,32 @@
   }
 
   .sso_login_form{
-    text-align: center;
-    padding: 20px 0 20px 0;
+    text-align: right;
     border-bottom: 1px solid white;
+    padding: 0 0 20px 0;
+  }
+
+  .sso_login{
+    padding: 20px 40px 0 0;
+  }
+
+  .sso_openid_form{
+    text-align: right;
+    margin-right: 84px;
+  }
+
+  .sso_openid_label{
+    width: 33%;
+    float: left;
+    text-align: right;
+    color: white;
+    white-space: nowrap;
+  }
+
+  .sso_openid_image{
+    float:left;
+    margin-left:20px;
+    margin-top: -4px;
   }
 
   .sso_login_input{
@@ -98,7 +121,7 @@
   }
   
   .sso_login_label{
-    width: 40%;
+    width: 43%;
     float: left;
     text-align: right;
     color: white;
@@ -106,7 +129,7 @@
   }
 
   .sso_url_input{
-    width: 300px;
+    width: 250px;
     border: 2px solid white;
     padding: 1px;
   }
@@ -165,4 +188,8 @@
 
   .sso_image_links a{
     color: #33CCDA;
+  }
+
+  .sso_submit{
+    text-align:center;
   }
