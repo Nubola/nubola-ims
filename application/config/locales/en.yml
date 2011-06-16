@@ -879,3 +879,4 @@ en:
   openid_invalid: "This does not appear to be a valid OpenID"
   openid_needs_setup: "OpenID verification needs setup"
   openid_problems: "There were problems with OpenID"
+  identity_url: "OpenID URL"

@@ -25,7 +25,7 @@
 
           <div class="sso_pair">
             <div class="sso_openid_image"><%= image_tag "OpenID32x32.png", :html => { :title => "OpenID", :alt => "OpenID"} %></div>
-            <label for="url_login" class="sso_openid_label">OpenID URL:</label>
+            <label for="url_login" class="sso_openid_label"><%=t(:identity_url)%>:</label>
             <input type="text" name="openid_url" id="openid_url" value="<%= flash[:login] %>" class="sso_url_input"  />
           </div>
 

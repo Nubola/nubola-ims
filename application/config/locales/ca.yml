@@ -881,3 +881,4 @@ quedaran fixes i només es podrà canviar:</br>
   openid_invalid: "No és un OpenID vàlid"
   openid_needs_setup: "La verificació OpenID necessita instal·lació"
   openid_problems: "Hi ha hagut problemes amb OpenID"
+  identity_url: "URL d'OpenID"
