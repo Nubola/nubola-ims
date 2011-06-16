@@ -487,6 +487,7 @@ es:
         user_image: Imagen de usuario
         confirmed: Confirmado
         wallpaper: Fondo de escritorio
+        identity_url: "URL de OpenID"
       contract:
         code: Código
         date: Fecha

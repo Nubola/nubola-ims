@@ -485,6 +485,7 @@ ca:
         user_image: Imatge d'usuari
         confirmed: Confirmat
         wallpaper: "Fons d'escriptori"
+        identity_url: "URL d'OpenID"
       contract:
         code: Codi
         date: Data

@@ -41,6 +41,10 @@
         <% end %>
       </tr>
       <tr>
+        <td id="caption">URL de OpenID:</td>
+        <td><%=text_field("user","identity_url")%></td>
+      </tr>
+      <tr>
         <td id="caption">Nombre: *</td>
         <td><%=text_field("user","name", :id => "required_field")%></td>
       </tr>

@@ -6,28 +6,31 @@
         <%= label_tag('* ' + t("login")) %>
         <%= value_tag(text_field("user", "login")) %>
       <% end %>
-      
+
       <%= label_tag('* ' + t("password")) %>
       <%= value_tag(password_field("user", "password")) %>
-      
+
       <%= label_tag('* ' + t("password_confirmation")) %>
       <%= value_tag(password_field("user", "password_confirmation")) %>
-      
+
+      <%= label_tag(t("identity_url")) %>
+      <%= value_tag(text_field("user", "identity_url")) %>
+
       <%= label_tag('* ' + t("name")) %>
       <%= value_tag(text_field("user", "name")) %>
-      
+
       <%= label_tag('* ' + t("surname")) %>
       <%= value_tag(text_field("user", "surname")) %>
-      
+
       <%= label_tag('* ' + t("phone")) %>
       <%= value_tag(text_field("user", "telephone")) %>
-      
+
       <%= label_tag(t("mobile")) %>
       <%= value_tag(text_field("user", "mobile")) %>
-      
+
       <%= label_tag('* ' + t("email")) %>
       <%= value_tag(text_field("user", "email")) %>
-      
+
       <tr>
         <td><b>(*): <%= t("mandatory_fields") %></b></td>
       </tr>

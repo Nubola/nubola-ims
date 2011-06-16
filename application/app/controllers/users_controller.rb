@@ -1,11 +1,11 @@
 class UsersController < AdminRoleController
 
-  COLS = [ :login, :password, :password_confirmation, :name, :surname, :telephone, :mobile, :email, :role, :group, :group_created_at, :apps, :confirmed, :user_settings, :status]
+  COLS = [ :login, :password, :password_confirmation, :identity_url, :name, :surname, :telephone, :mobile, :email, :role, :group, :group_created_at, :apps, :confirmed, :user_settings, :status]
 
   active_scaffold :user do |config|
     config.label='users'
     config.columns = COLS
-    config.list.columns = COLS - [ :password, :password_confirmation, :telephone, :mobile, :apps, :user_settings]
+    config.list.columns = COLS - [ :password, :password_confirmation, :telephone, :mobile, :apps, :user_settings, :identity_url]
     config.show.columns = COLS
     config.create.columns = COLS - [:group_created_at]
     config.update.columns = COLS - [:group_created_at]
