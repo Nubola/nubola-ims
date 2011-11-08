@@ -133,6 +133,7 @@
                         <% if @parameter.input == 'dropdown' %>
                           <% 
                             values_list = @parameter.parameter_values.map{|pv| pv.value}
+                            #TODO: check for Group. default_value
                             if @parameter.default_value && @parameter.default_value.include?("User.")
                               values_list << @user.get_field_by_name(@parameter.default_value)
                             end 
@@ -149,8 +150,9 @@
                             <% end %>
                           </table>
                         <% elsif  @parameter.input == 'hidden' %>
-                          <% value = @parameter.default_value.include?("User.") ? @user.get_field_by_name(@parameter.default_value) : @parameter.default_value %>
-                          <%= hidden_field_tag("user_parameters[#{@parameter.id}]", value) %>
+                          <% value = @parameter.default_value.include?("Group.") ? @user.group.get_field_by_name(@parameter.default_value) : nil %>
+                          <% value ||= @parameter.default_value.include?("User.") ? @user.get_field_by_name(@parameter.default_value) : @parameter.default_value %>
+                          <%= text_field_tag("user_parameters[#{@parameter.id}]", value) %>
                           <% hidden_fields = hidden_fields + 1 %>
                         <% else %>
                           <%= text_field("user_parameters",
