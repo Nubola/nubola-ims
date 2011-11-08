@@ -24,6 +24,9 @@ module DesktopHelper
   def link_to_app(text, url, id)
      # la url tiene que ser https si estamos en SSL
      url = url.gsub(/^http:/,"https:") if request.ssl?
+     user = User.find(session[:user].id)
+     url.gsub!(/%u/,user.login)
+     url.gsub!(/%g/,user.group.name)
      link_to_function text, "addLayer('#{url}','#{id}'); addButton('#{text}','#{id}'); showApp('#{id}');", :id => "#{id}_link"
   end
 
