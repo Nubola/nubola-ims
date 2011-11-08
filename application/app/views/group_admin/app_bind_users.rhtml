@@ -152,7 +152,7 @@
                         <% elsif  @parameter.input == 'hidden' %>
                           <% value = @parameter.default_value.include?("Group.") ? @user.group.get_field_by_name(@parameter.default_value) : nil %>
                           <% value ||= @parameter.default_value.include?("User.") ? @user.get_field_by_name(@parameter.default_value) : @parameter.default_value %>
-                          <%= text_field_tag("user_parameters[#{@parameter.id}]", value) %>
+                          <%= hidden_field_tag("user_parameters[#{@parameter.id}]", value) %>
                           <% hidden_fields = hidden_fields + 1 %>
                         <% else %>
                           <%= text_field("user_parameters",
